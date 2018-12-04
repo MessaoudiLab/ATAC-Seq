@@ -68,7 +68,7 @@ data_gz=Data.gz
 data_fasta=Data.fa
 
 bedtools getfasta -fi $genome -bed $data_gz -fo $data_fasta
-
+```
 ## References
 Original tutorial in repository
 
