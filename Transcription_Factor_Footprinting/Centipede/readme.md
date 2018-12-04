@@ -57,7 +57,6 @@ module list
 Directory/Pathway/matrix2meme < <(tail -n+2 PWM.txt | cut -f2-) > PWM.meme
 cat PWM.meme
 ```
-### UPLOAD EXAMPLE PWM and MEME FILE
 
 
 ## References
