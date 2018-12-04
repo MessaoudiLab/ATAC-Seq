@@ -7,6 +7,8 @@ Use of a computer cluster is highly recommended as this data analysis requires a
 ## Prerequisite Software
 
 ### Meme Suite
+Meme suite is installed on the cluster, but for unknown reasons, this workflow currently only functions if the data processing of the Meme suite is completed on a local computer.
+
 Go to the MEME Suite download page to find the latest version of software:
 http://meme-suite.org/doc/download.html
 ```
@@ -49,6 +51,14 @@ module list
 1. **Position Weight Matrix**: a probability table describing TF motifs; [search here](https://ccg.vital-it.ch/pwmtools/pwmbrowse.html)
 2. **Reference Genome**: .fa file of the subject species genome
 3. **.bed data file**: sequencing data derived from prior atac-seq analysis; filtered for statistically significant peaks preferred
+
+## Step 1: PWM > Meme file
+```
+Directory/Pathway/matrix2meme < <(tail -n+2 PWM.txt | cut -f2-) > PWM.meme
+cat PWM.meme
+```
+### UPLOAD EXAMPLE PWM and MEME FILE
+
 
 ## References
 Original tutorial in repository
