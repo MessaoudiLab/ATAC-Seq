@@ -58,6 +58,16 @@ Directory/Pathway/matrix2meme < <(tail -n+2 PWM.txt | cut -f2-) > PWM.meme
 cat PWM.meme
 ```
 
+## Step 2: Find Putative TF binding Sites
+Prepare reference genome and atac-seq data files; reference genome should be .fa and data set should be compressed into .gz
+
+Obtain nucleotide sequences within peaks:
+```
+genome=ReferenceGenome.fa
+data_gz=Data.gz
+data_fasta=Data.fa
+
+bedtools getfasta -fi $genome -bed $data_gz -fo $data_fasta
 
 ## References
 Original tutorial in repository
