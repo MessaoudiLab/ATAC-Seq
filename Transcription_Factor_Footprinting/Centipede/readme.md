@@ -11,11 +11,12 @@ Use of a computer cluster is highly recommended as this data analysis requires a
 ### Centipede
 Go to the MEME Suite download page to find the latest version of software:
 http://meme-suite.org/doc/download.html
-
+```
 wget http://meme-suite.org/meme-software/4.10.1/meme_4.10.1_4.tar.gz tar xf meme_4.10.1_4.tar.gz
 cd meme_4.10.1
 ./configure --prefix=$HOME/meme --with-url="http://meme-suite.org" make
 make install
+```
 Add the $HOME/meme/bin folder to your PATH after you execute the above commands. You’ll probably want
 to add this line to your .bashrc or similar. export PATH="$PATH:$HOME/meme/bin"
 
