@@ -104,7 +104,11 @@ Do note which row you would like to plot in **mat**object.
 ```
 plot(cen$mat[#row,], xlab = "Position", ylab = "Read Start Sites", type = "h",
   + col = rep(c("blue", "red"), each = 213))
+abline(v = c(100, 113, 313, 326) + 0.5, lty = 2)
+abline(v = 213 + 0.5)
 ```
+Pay attention to argument **each** as it refers to the midway point between positive and negative strands; similarly the numbers in abline functions need to also correspond with motif length.
+
 To see how many read starts occur in each region:
 ```
 rowSums(cen$mat)[1:10]
