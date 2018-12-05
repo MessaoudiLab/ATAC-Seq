@@ -69,6 +69,53 @@ data_fasta=Data.fa
 
 bedtools getfasta -fi $genome -bed $data_gz -fo $data_fasta
 ```
+
+Search for sequences within these peaks that match the PWM (do this on local cpu):
+```
+meme=PWM.meme
+sites=PWM.fimo.txt.gz
+
+Directory/Pathway/fimo --text --parse-genomic-coord $meme $dnase_fasta | gzip > $sites
+
+zcat $sites | head
+```
+
+## Determine if TF sites are bound
+Start and R session in cluster:
+```
+library(Rsamtools)
+library(CENTIPEDE)
+library(CENTIPEDE.tutorial)
+```
+
+Count read start positions within (100) bp up or downstream of PWM match sites that were determined statistically significant by FIMO (P < 1e-4).
+```
+cen <- centipede_data(bamfile = ".bam", fimo_file = "fimo.txt.gz", pvalue = 1e-4, flank_size = 100
+
+head(cen$regions)
+```
+The cen object will contain 2 objects: 
+  1. **regions**: dataframe with one row for each PWM region
+  2. **mat**: matrix with read counts for each PWM region.
+
+Do note how many columns **mat** object contains. In the coming plot object, the first half of the columns represent the positive strand while the second half of the columns represent the negative strand.
+Do note which row you would like to plot in **mat**object.
+
+```
+plot(cen$mat[#row,], xlab = "Position", ylab = "Read Start Sites", type = "h",
+  + col = rep(c("blue", "red"), each = 213))
+```
+To see how many read starts occur in each region:
+```
+rowSums(cen$mat)[1:10]
+```
+
+### Compute posterior probability that a TF is bound:
+```
+library(CENTIPEDE)
+fit <- fitCentipede(Xlist=list(DNase=cen$mat),Y=as.matrix(data.frame(Intercept=rep(1,nrow(cen$mat)))))
+
+
 ## References
 Original tutorial in repository
 
