@@ -114,8 +114,27 @@ rowSums(cen$mat)[1:10]
 ```
 library(CENTIPEDE)
 fit <- fitCentipede(Xlist=list(DNase=cen$mat),Y=as.matrix(data.frame(Intercept=rep(1,nrow(cen$mat)))))
+```
 
+How many sites have a posterior probability of 1?
+```
+sum(fit$PostPr == 1)
+```
 
+Plot heatmap of count matrix
+```
+imageCutSitesCombined(cen$mat [fit$PostPr == 1,])
+```
+### Plot footprint estimated by Centipede
+```
+plotProfile(fit$LambdaParList[[1]], Mlen = #)
+```
+where **Mlen** is length of Motif
+
+## Discussion
+This tutorial does not deviate to much from the original as the only changes needed to be made regarded the cpu interface on which this workflow would work. The cluster is the primary interface, but currently the functions of MEME suite in creating the fimo text file does not work in the cluster.
+
+Additionally, make sure that all files are indexing the chromosomes similarly as some files may call them "chr #" or just by the #.
 ## References
 Original tutorial in repository
 
