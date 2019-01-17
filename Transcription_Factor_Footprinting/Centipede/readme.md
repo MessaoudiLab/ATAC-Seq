@@ -58,6 +58,9 @@ Directory/Pathway/matrix2meme < <(tail -n+2 PWM.txt | cut -f2-) > PWM.meme
 cat PWM.meme
 ```
 example pathway: meme/libexec/meme-5.02/matrix2meme
+
+Upload the meme file to the cluster through cyberduck and you can now work exclusively in the cluster.
+
 ## Step 2: Find Putative TF binding Sites
 Prepare reference genome and atac-seq data files; reference genome should be .fa and data set should be compressed into .gz
 
