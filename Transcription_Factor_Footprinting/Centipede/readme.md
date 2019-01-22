@@ -93,7 +93,7 @@ library(CENTIPEDE.tutorial)
 
 Count read start positions within (100) bp up or downstream of PWM match sites that were determined statistically significant by FIMO (P < 1e-4).
 ```
-cen <- centipede_data(bamfile = ".bam", fimo_file = "fimo.txt.gz", pvalue = 1e-4, flank_size = 100
+cen <- centipede_data(bamfile = ".bam", fimo_file = "fimo.txt.gz", pvalue = 1e-4, flank_size = 100)
 
 head(cen$regions)
 ```
