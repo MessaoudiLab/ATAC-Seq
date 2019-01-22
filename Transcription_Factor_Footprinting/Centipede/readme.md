@@ -1,4 +1,4 @@
-# Centipede
+# Centipede **INCOMPLETE**
 
 ## Introduction
 CENTIPEDE is a computational method to infer if a region of the genome is bound by a particular TF. It uses information from a DNase-Seq experiment about the profile of reads surrounding a putative TF binding site. Further, it is able to incorporoate prior information such as sequence conservation across species.
