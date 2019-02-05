@@ -48,7 +48,7 @@ module list
 ```
 
 ## Prereqisite Data
-1. **Position Weight Matrix**: a probability table describing TF motifs; [search here](https://ccg.vital-it.ch/pwmtools/pwmbrowse.html)
+1. **Position Weight Matrix**: a probability table describing TF motifs; [search here](https://ccg.vital-it.ch/pwmtools/pwmbrowse.html); copy into new .txt file
 2. **Reference Genome**: .fa file of the subject species genome
 3. **.bed data file**: sequencing data derived from prior atac-seq analysis; filtered for statistically significant peaks preferred
 
