@@ -59,7 +59,17 @@ cat PWM.meme
 ```
 example pathway: meme/libexec/meme-5.02/matrix2meme
 
-Upload the meme file to the cluster through cyberduck and you can now work exclusively in the cluster.
+Search for sequences within these peaks that match the PWM:
+```
+meme=PWM.meme
+sites=PWM.fimo.txt.gz
+
+Directory/Pathway/fimo --text --parse-genomic-coord $meme $dnase_fasta | gzip > $sites
+
+zcat $sites | head
+```
+
+Upload the fimo file to the cluster through cyberduck and you can now work exclusively in the cluster.
 
 ## Step 2: Find Putative TF binding Sites
 Prepare reference genome and atac-seq data files; reference genome should be .fa and data set should be compressed into .gz
@@ -71,16 +81,6 @@ data_gz=Data.gz
 data_fasta=Data.fa
 
 bedtools getfasta -fi $genome -bed $data_gz -fo $data_fasta
-```
-
-Search for sequences within these peaks that match the PWM (do this on local cpu):
-```
-meme=PWM.meme
-sites=PWM.fimo.txt.gz
-
-Directory/Pathway/fimo --text --parse-genomic-coord $meme $dnase_fasta | gzip > $sites
-
-zcat $sites | head
 ```
 
 ## Determine if TF sites are bound
