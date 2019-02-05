@@ -1,4 +1,4 @@
-# Centipede **(INCOMPLETE)**
+# Centipede
 
 ## Introduction
 CENTIPEDE is a computational method to infer if a region of the genome is bound by a particular TF. It uses information from a DNase-Seq experiment about the profile of reads surrounding a putative TF binding site. Further, it is able to incorporoate prior information such as sequence conservation across species.
@@ -52,7 +52,7 @@ module list
 2. **Reference Genome**: .fa file of the subject species genome
 3. **.bed data file**: sequencing data derived from prior atac-seq analysis; filtered for statistically significant peaks preferred
 
-## Step 1: PWM > Meme file
+## Step 1: PWM > Meme > fimo
 ```
 Directory/Pathway/matrix2meme < <(tail -n+2 PWM.txt | cut -f2-) > PWM.meme
 cat PWM.meme
