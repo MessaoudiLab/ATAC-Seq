@@ -15,7 +15,7 @@ The program will trim a determined number of base pairs from the ends, remove ad
 This script is written to process pair-end reads. 
 Trim-Galore will look to remove illumina adaptor sequences unless specified to be nextera or small_rna.
 
-[User Guide] (https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md)
+[User Guide](https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md)
 
 ### Options for Trim-Galore
     -h/--help               Print this help message and exits.
