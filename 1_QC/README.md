@@ -93,13 +93,13 @@ The report will be coded in html so it can be viewed using an internet browser.
                     needs to mirror the default limits.txt file found in the
                     Configuration folder.
                     
-   -k --kmers       Specifies the length of Kmer to look for in the Kmer content
+    -k --kmers       Specifies the length of Kmer to look for in the Kmer content
                     module. Specified Kmer length must be between 2 and 10. Default
                     length is 7 if not specified.
                     
-   -q --quiet       Supress all progress messages on stdout and only report errors.
+    -q --quiet       Supress all progress messages on stdout and only report errors.
    
-   -d --dir         Selects a directory to be used for temporary files written when
+    -d --dir         Selects a directory to be used for temporary files written when
                     generating report images. Defaults to system temp directory if
                     not specified.
                     
