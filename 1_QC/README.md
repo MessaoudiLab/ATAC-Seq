@@ -11,6 +11,8 @@ Default settings for this script format the output in a fastq format, compressed
 Compressed files can be extracted using the "gunzip" command.
 The report will be coded in html so it can be viewed using an internet browser.
 
+Future work considers using the python module, [MultiQC] (https://multiqc.info/), to more easily compare QC reports among an entire experiment. 
+
 ### Options for fastqc function
     -h --help       Print this help file and exit
     
