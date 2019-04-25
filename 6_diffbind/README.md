@@ -7,7 +7,6 @@ Most changes address how to export the resulting plots and visuals from the anal
 The last change differentiates the object name that information is saved under, during each step. 
 Doing so ensures that the user doesn't accidentally overwrite an object with errors or incorrect information.
 
-## Introduction
 ## Prerequisites
 ### R module in computer cluster
 To access the included R module in the computer cluster, simply execute "R" in the command line.
