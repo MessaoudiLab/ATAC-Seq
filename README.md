@@ -6,3 +6,5 @@ It is strongly advised for the user to execute the scripts through submission to
 Each step is labeled and should be followed in sequential order from 1_QC to 6_diffbind.
 
 The folders for the steps contain a script for the corresponding function and links to manuals for the required software modules.
+
+Contributors: Suhas Sureshchandra, Brian Ligh
