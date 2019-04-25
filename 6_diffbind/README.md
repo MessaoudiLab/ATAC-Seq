@@ -71,5 +71,20 @@ Additional options for the score argument can be found in the bioconductor docum
 
 **Note**: This step will take around 5-10 minutes for each sample.  
 
-## Step 3: 
+## Step 3: Establishing a Contrast
+```
+targets.contrast <- dba.contrast(targets.count, categories=DBA_CONDITION)
+```
+This function establishes a contrast based on one of the metadata columns.
+
+Full list of category labels used in this function and others to call metadata:
+* DBA_ID
+* DBA_TISSUE
+* DBA_FACTOR
+* DBA_CONDITION
+* DBA_TREATMENT
+* DBA_REPLICATE
+* DBA_CALLER
+
+## Step 4: Performing the Differential Analysis
 
