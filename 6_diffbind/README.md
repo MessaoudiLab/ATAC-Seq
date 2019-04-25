@@ -8,3 +8,13 @@ The last change differentiates the object name that information is saved under, 
 Doing so ensures that the user doesn't accidentally overwrite an object with errors or incorrect information.
 The first major step of the process, labeled "3.2 Counting reads" in the full manual, can take hours to complete.
 
+## Introduction
+
+## Prerequisites
+### R module in computer cluster
+To access the included R module in the computer cluster, simply execute "R" in the command line.
+
+To exit the R module and return to the unix shell, execute "q()" in the command line.
+
+### Targets file
+
