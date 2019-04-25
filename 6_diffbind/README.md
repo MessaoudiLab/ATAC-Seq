@@ -34,11 +34,11 @@ The eigth and ninth columns are only applicable if the user has a control bam fi
 The tenth column, "Peaks," contains the peak file for the sample. The user can choose to use one of either the .narrowPeak, .xls, or .bed files from the output of the MACS2 function from the previous step. A full directory pathway is recommended.
 
 The eleventh and final column, "PeakCaller," denotes the format of the corresponding peak file. The options are as follows:
-* “raw”: text file file; peak score is in fourth column
-* “bed”: .bed file; peak score is in fifth column
-* “narrow”: default peak.format: narrowPeaks file
-* “macs”: MACS .xls file
-* “swembl”: SWEMBL .peaks file
-* “bayes”: bayesPeak file
-* “peakset”: peakset written out using pv.writepeakset
-* “fp4”: FindPeaks v4
+* **raw**: text file file; peak score is in fourth column
+* **bed**: .bed file; peak score is in fifth column
+* **narrow**: default peak.format: narrowPeaks file
+* **macs**: MACS .xls file
+* **swembl**: SWEMBL .peaks file
+* **bayes**: bayesPeak file
+* **peakset**: peakset written out using pv.writepeakset
+* **fp4**: FindPeaks v4
