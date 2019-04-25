@@ -69,6 +69,8 @@ The "summits" argument will recenter each peak with extensions of a determined n
 The function will use RPKM normalized scores by default, but can be changed to raw read counts with the argument, "score = DBA_SCORE_READS."
 Additional options for the score argument can be found in the bioconductor documentation.
 
+Two columns will be appended to the object as a result: "Intervals" and "FRiP," denoting the consensus length peakset and FRiP score.
+
 **Note**: This step will take around 5-10 minutes for each sample.  
 
 ## Step 3: Establishing a Contrast
@@ -87,4 +89,53 @@ Full list of category labels used in this function and others to call metadata:
 * DBA_CALLER
 
 ## Step 4: Performing the Differential Analysis
+```
+targets.analyze <- dba.analyze(targets.contrast)
+```
+This function will run a DESeq2 analysis using the binding affinity matrix and established contrast. The resulting dba object will show the number of statistically significant peaks out of the consensus set (FDR < 0.5). 
+
+```
+targets.report <- dba.report(targets.analyze)
+write.table(targets.report, "deseq.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+```
+The dba.report function will retrieve the differentially bound sites and format a GRanges object. 
+The value columns show the mean read concentration over all the samples (the default calculation uses log2 normalized ChIP read counts with control read counts subtracted) and the mean concentration over the first group and second group. 
+The Fold column shows the difference in mean concentrations between the two groups, with a positive value indicating increased binding affinity in the first group and a negative value indicating increased binding affinity in the second group.
+The final two columns give confidence measures for identifying these sites as differentially bound, with a raw p-value and a multiple testing corrected FDR in the final column.
+
+## Step 5: Plotting
+1. Plot Correlation Heatmap
+```
+pdf("Cluster.pdf")
+plot(targets.analyze, contrast=1)
+dev.off()
+```
+2. Plot PCA (adjust label if necessary)
+```
+pdf("PCA.pdf")
+dba.plotPCA(targets.analyze, contrast=1, label=DBA_REPLICATE)
+dev.off()
+```
+3. Plot MA
+```
+pdf("MA.pdf")
+dba.plotMA(targets.analyze)
+dev.off()
+```
+4. Plot Volcano
+```
+pdf("Volc.pdf")
+dba.plotVolcano(targets.analyze)
+dev.off()
+```
+5. Plot Heatmap of binding affinity
+```
+pdf("Heat.pdf")
+dba.ploHeatmap(targets.analyze, contrast=1, correlations=FALSE)
+dev.off()
+```
+
+
+
+
 
