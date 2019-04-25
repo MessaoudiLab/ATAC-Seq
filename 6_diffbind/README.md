@@ -43,3 +43,23 @@ The eleventh and final column, "PeakCaller," denotes the format of the correspon
 * **bayes**: bayesPeak file
 * **peakset**: peakset written out using pv.writepeakset
 * **fp4**: FindPeaks v4
+
+## Installation
+```
+install.packages("BiocManager")
+library(BiocManager)
+BiocManager :: install("DiffBind")
+library(DiffBind)
+```
+
+## Step 1: Import Files into R
+```
+targets <- dba(sampleSheet="targets_file_example.csv")
+```
+This function simply saves the csv formatted targets file as a "dba object."
+New information will be appended to this object in the following functions.
+
+## Step 2: Counting Reads
+```
+targets.count <- dba.count(targets, summit=200)
+```
