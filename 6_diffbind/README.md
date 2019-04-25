@@ -24,6 +24,7 @@ The first six columns of the targets file are listed as follows:
 4. Condition
 5. Treatment
 6. Replicate
+
 These columns will serve as potential explanatory variables for the analysis. Unused cells are labeled as "NA."
 
 The seventh column, "bamReads," contains the corresponding .bam formatted aligned reads for each sample. A full directory pathway is recommended to prevent the code from breaking should the user work from multiple directories. 
