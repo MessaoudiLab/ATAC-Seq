@@ -6,7 +6,6 @@ Most changes address how to export the resulting plots and visuals from the anal
 
 The last change differentiates the object name that information is saved under, during each step. 
 Doing so ensures that the user doesn't accidentally overwrite an object with errors or incorrect information.
-The first major step of the process, labeled "3.2 Counting reads" in the full manual, can take hours to complete.
 
 ## Introduction
 ## Prerequisites
@@ -61,5 +60,16 @@ New information will be appended to this object in the following functions.
 
 ## Step 2: Counting Reads
 ```
-targets.count <- dba.count(targets, summit=200)
+targets.count <- dba.count(targets, summits=200)
 ```
+This function calculates a binding matrix with scores based on read counts for every sample (affinity scores), rather than confidence scores for only those peaks called in a specific sample (occupancy scores).
+
+The "summits" argument will recenter each peak with extensions of a determined number of base pairs on each side. In this example, the peaks will be recentered with an interval of 401 bp, 200 on each side.
+
+The function will use RPKM normalized scores by default, but can be changed to raw read counts with the argument, "score = DBA_SCORE_READS."
+Additional options for the score argument can be found in the bioconductor documentation.
+
+**Note**: This step will take around 5-10 minutes for each sample.  
+
+## Step 3: 
+
