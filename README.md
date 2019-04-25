@@ -7,6 +7,6 @@ Each step is labeled and should be followed in sequential order from 1_QC to 6_d
 
 The folders for the steps contain a script for the corresponding function and links to manuals for the required software modules.
 
-[Overview of ATAC-Seq](https://informatics.fas.harvard.edu/atac-seq-guidelines-old-version.html)
+[Overview of ATAC-Seq](https://informatics.fas.harvard.edu/atac-seq-guidelines.html)
 
 Contributors: Suhas Sureshchandra, Brian Ligh
