@@ -135,6 +135,11 @@ dba.ploHeatmap(targets.analyze, contrast=1, correlations=FALSE)
 dev.off()
 ```
 
+## References
+[DiffBind tutorial](http://bioconductor.org/packages/release/bioc/vignettes/DiffBind/inst/doc/DiffBind.pdf)
+[Bioconductor Manual](https://bioconductor.org/packages/devel/bioc/manuals/DiffBind/man/DiffBind.pdf)
+
+written by: Brian Ligh
 
 
 
