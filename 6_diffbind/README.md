@@ -70,7 +70,7 @@ Additional options for the score argument can be found in the bioconductor docum
 
 Two columns will be appended to the object as a result: "Intervals" and "FRiP," denoting the consensus length peakset and FRiP score.
 
-**Note**: This step will take around 5-10 minutes for each sample.  
+**Note**: This step will take around 4-8 minutes for each sample.  
 
 ## Step 3: Establishing a Contrast
 ```
