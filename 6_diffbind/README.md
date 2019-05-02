@@ -102,7 +102,14 @@ The value columns show the mean read concentration over all the samples (the def
 The Fold column shows the difference in mean concentrations between the two groups, with a positive value indicating increased binding affinity in the first group and a negative value indicating increased binding affinity in the second group.
 The final two columns give confidence measures for identifying these sites as differentially bound, with a raw p-value and a multiple testing corrected FDR in the final column.
 
-## Step 5: Plotting
+## Step 5: Retrieving Consensus Peakset
+```
+targets.peakset <- dba.peakset(targets.analyze, bRetrieve)
+write.table(targets.peakset, "consensus_peakset.txt", sep="\t", quote=FALSE)
+```
+This function will retrieve a list of the consensus peakset among the samples. This peakset corresponds with the "Intervals" column in the dba object.
+
+## Step 6: Plotting
 1. Plot Correlation Heatmap
 ```
 pdf("Cluster.pdf")
