@@ -17,4 +17,24 @@ The function will create a folder filled with peak files of different formats in
 [Github page for MACS2](https://github.com/taoliu/MACS)
 
 # Peak Calling using Homer
+
+Peak Calling in Homer is broken up among 3 scripts
+
 ```
+homer_tagdir.sh bamfile out
+
+# bamfile: input .bam file
+# out: output name prefix
+```
+This function will index the read alignments into a more organized directory. This sorting method also provides numerical summaries of the dataset. The created tag directory will be the primary source of data used in the following functions.
+
+[For more information](http://homer.ucsd.edu/homer/ngs/tagDir.html)
+
+```
+homer_peakcalling.sh tagdir out gsize
+
+# tagdir: input tag directory
+# out: output name prefix
+# gsize: estimate size of genome for that specific tag directory
+```
+This function will call peaks from the tag directory and create 2 output peak files, one of them being a .bed file. The 
