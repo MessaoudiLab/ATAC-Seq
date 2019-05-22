@@ -16,7 +16,7 @@ The function will create a folder filled with peak files of different formats in
 
 [Github page for MACS2](https://github.com/taoliu/MACS)
 
-# Peak Calling and using Homer
+# Peak Calling and Diff Analysis using Homer
 
 Peak Calling in Homer is broken up among 3 scripts
 
