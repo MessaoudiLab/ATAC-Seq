@@ -7,6 +7,11 @@ Each step is labeled and should be followed in sequential order from 1_QC to 6_d
 
 The folders for the steps contain a script for the corresponding function and links to manuals for the required software modules.
 
+All scripts can be found in the following directory
+```
+/bigdata/messaoudilab/ssure003/Projects/Maob_Mom_CD14_ATAC/paper-jan2019/scripts/
+```
+
 ### Resources
 * [Overview of ATAC-Seq](https://informatics.fas.harvard.edu/atac-seq-guidelines.html)
 * [Managing Jobs on Cluster](https://hpcc.ucr.edu/manuals_linux-cluster_jobs.html)
