@@ -16,3 +16,5 @@ The function will create a folder filled with peak files of different formats in
 
 [Github page for MACS2](https://github.com/taoliu/MACS)
 
+# Peak Calling using Homer
+```
