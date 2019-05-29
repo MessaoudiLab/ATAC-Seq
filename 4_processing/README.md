@@ -17,7 +17,7 @@ atac_shift.sh bamfile
 
 # bamfile: input bam formatted file, after first processing step
 ```
-To execute this script, the R packages 'ATACseqQC' and a reference genome will need to be installed
+To execute this script, the R packages 'ATACseqQC' and a reference genome will need to be installed.
 
 The ATACseqQC package in R is used to shift the aligned reads.
 By default, the positive strand is shifted 4 bp and the negative strand is shifted 5 bp.
