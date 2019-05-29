@@ -24,7 +24,7 @@ Peak Calling in Homer is broken up among 3 scripts
 homer_tagdir.sh bamfile out
 
 # bamfile: input .bam file
-# out: output name prefix
+# out: output directory name
 ```
 This function will index the read alignments into a more organized directory. 
 This sorting method also provides numerical summaries of the dataset. 
