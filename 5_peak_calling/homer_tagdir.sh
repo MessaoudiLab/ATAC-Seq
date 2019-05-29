@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
-out=$1
-shift
 bamin=$1
+shift
+out=$1
 shift
 
 module load samtools
