@@ -17,6 +17,8 @@ shift
 #Load the packages
 echo $bam
 module load samtools
+module unload R
+module load R/3.5.0
 #Pairwise alignment and conversion to bam file format
 Rscript /bigdata/messaoudilab/ssure003/Projects/Maob_Mom_CD14_ATAC/paper-jan2019/scripts/atac-shift.R $bam
 
