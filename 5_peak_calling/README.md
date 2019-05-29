@@ -46,13 +46,12 @@ For the most accurate statistical test results, use the gsize value specified fo
 [For more information](http://homer.ucsd.edu/homer/ngs/peaks.html)
 
 ```
-homer_diffpeaks.sh peaks targettag backtag out -P 0.05
+homer_diffpeaks.sh peaks targettag backtag out
 
 # peaks: input .bed formatted peaks file
 # targettag: tag directory of the experimental condition
 # backtag: tag directory of the background condition
 # out: output name prefix
-# -P: p-value threshold
 ```
 
 This function will find differentially expressed peaks in the target tag directory relative to the background tag directory. 
