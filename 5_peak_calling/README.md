@@ -55,8 +55,9 @@ homer_diffpeaks.sh peaks targettag backtag out
 ```
 
 This function will find differentially expressed peaks in the target tag directory relative to the background tag directory. 
-The output text file will only identify peaks with positive fold change.
-Run this function again, switching the order of the tag directories, to identify peaks with negative fold change.
+Two output files will be produced identifying significant peaks with positive fold change and negative fold change.
+The fold change values in the negative file will not include a '-' sign.
+
 
 [For more information](http://homer.ucsd.edu/homer/ngs/mergePeaks.html)
 
