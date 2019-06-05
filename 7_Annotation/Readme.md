@@ -49,8 +49,14 @@ library(ChIPseeker)
 ## Step 1: Peak Annotation
 ```
 peakAnno <- annotatePeak(peak, tssRegions = c(-1000,100), TxDb = txdb, annoDb = "org.Hs.eg.db")
+write.table(as.data.frame(peakAnno), "annotated_peaks.txt", sep ="\t", quote = FALSE, row.names = FALSE)
 ```
 
-
+## Step 2: Plot Annotation Pie Chart
+```
+pdf("AnnoPie.pdf")
+plotAnnoPie(peakAnno)
+dev.off()
+```
 
 [For more Information](https://www.bioconductor.org/packages/release/bioc/vignettes/ChIPseeker/inst/doc/ChIPseeker.html)
