@@ -1,6 +1,7 @@
 # Differential Binding Analysis in R
 
-**Note**: If peak calling and differential analysis was done through homer in the previous step, only perform up to the dba.count function. Then finish by plotting the resulting dba.count object to produce the PCA graph
+**Note**: If peak calling and differential analysis was done through homer in the previous step, only perform up to the dba.count function. 
+Then finish by plotting the resulting dba.count object to produce the PCA graph.
 
 The script included in this folder is a distilled version of the full manual, adjusted to work with the computer cluster.
 
