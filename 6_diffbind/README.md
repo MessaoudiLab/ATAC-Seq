@@ -62,11 +62,11 @@ New information will be appended to this object in the following functions.
 
 ## Step 2: Counting Reads
 ```
-targets.count <- dba.count(targets, summits=200)
+targets.count <- dba.count(targets, summits=100)
 ```
 This function calculates a binding matrix with scores based on read counts for every sample (affinity scores), rather than confidence scores for only those peaks called in a specific sample (occupancy scores).
 
-The "summits" argument will recenter each peak with extensions of a determined number of base pairs on each side. In this example, the peaks will be recentered with an interval of 401 bp, 200 on each side.
+The "summits" argument will recenter each peak with extensions of a determined number of base pairs on each side. In this example, the peaks will be recentered with an interval of 201 bp, 100 on each side.
 
 The function will use RPKM normalized scores by default, but can be changed to raw read counts with the argument, "score = DBA_SCORE_READS."
 Additional options for the score argument can be found in the bioconductor documentation.
