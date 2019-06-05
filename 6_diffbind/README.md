@@ -147,7 +147,7 @@ dev.off()
 5. Plot Heatmap of binding affinity
 ```
 pdf("Heat.pdf")
-dba.ploHeatmap(targets.analyze, contrast=1, correlations=FALSE)
+dba.plotHeatmap(targets.analyze, contrast=1, correlations=FALSE)
 dev.off()
 ```
 
