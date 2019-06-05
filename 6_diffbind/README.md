@@ -17,7 +17,9 @@ To access the included R module in the computer cluster, simply execute "R" in t
 To exit the R module and return to the unix shell, execute "q()" in the command line.
 
 ### Targets file
-The targets file is a csv formatted matrix containing the information describing the experimental conditions as well as the directory pathways for the read files required. Reference targets_file_example.csv in this folder.
+The targets file is a csv formatted matrix containing the information describing the experimental conditions as well as the directory pathways for the read files required. 
+Reference targets_file_example.csv in this folder.
+List experimental condition samples before control samples
 
 The first six columns of the targets file are listed as follows:
 1. Sample ID
