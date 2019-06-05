@@ -33,7 +33,7 @@ The created tag directory will be the primary source of data used in the followi
 [For more information](http://homer.ucsd.edu/homer/ngs/tagDir.html)
 
 ```
-homer_peakcalling.sh tagdir out gsize
+homer_peak_calling.sh tagdir out gsize
 
 # tagdir: input tag directory
 # out: output name prefix
