@@ -19,7 +19,7 @@ The peak file must be a GRanges object rather than the .bed format.
 To convert to a GRanges object, the columns in the bed file must be in proper sequence.
 The first three columns must be "chromosome, start, stop"
 Additionally, make sure to add "chr" to the beginning of each value in the chromosome column if you're going to use a reference genome in UNSC format.
-The awk function can be used to reorder the columns and recursively add "chr".
+The *awk* function can be used to reorder the columns and recursively add "chr".
 
 Follow the following code to import the peak file and convert in R once the bed file is ready.
 
