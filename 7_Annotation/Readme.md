@@ -38,7 +38,18 @@ library(GenomicFeatures)
 txdb <- makeTxDbFromGFF("/directory/pathway/file", organism = Homo sapiens)
 ```
 
+## Installation
+```
+install.packages("BiocManager")
+library(BiocManager)
+BiocManager :: install("ChIPseeker")
+library(ChIPseeker)
+```
 
+## Step 1: Peak Annotation
+```
+peakAnno <- annotatePeak(peak, tssRegions = c(-1000,100), TxDb = txdb, annoDb = "org.Hs.eg.db")
+```
 
 
 [For more Information](https://www.bioconductor.org/packages/release/bioc/vignettes/ChIPseeker/inst/doc/ChIPseeker.html)
