@@ -124,6 +124,11 @@ pdf("PCA.pdf")
 dba.plotPCA(targets.analyze, contrast=1, label=DBA_REPLICATE)
 dev.off()
 ```
+or 
+```
+dba.plotPCA(targets.count)
+```
+
 3. Plot MA
 ```
 pdf("MA.pdf")
