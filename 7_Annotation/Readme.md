@@ -48,7 +48,7 @@ library(ChIPseeker)
 
 ## Step 1: Peak Annotation
 ```
-peakAnno <- annotatePeak(peak, tssRegions = c(-1000,100), TxDb = txdb, annoDb = "org.Hs.eg.db")
+peakAnno <- annotatePeak(peak, tssRegion = c(-1000,100), TxDb = txdb, annoDb = "org.Hs.eg.db")
 write.table(as.data.frame(peakAnno), "annotated_peaks.txt", sep ="\t", quote = FALSE, row.names = FALSE)
 ```
 
