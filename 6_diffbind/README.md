@@ -115,6 +115,9 @@ write.table(targets.peakset, "consensus_peakset.txt", sep="\t", quote=FALSE)
 This function will retrieve a list of the consensus peakset among the samples. This peakset corresponds with the "Intervals" column in the dba object.
 
 ## Step 6: Plotting
+
+**Note**: Correlation Heatmaps and PCAs can still be plotted without a contrast
+
 1. Plot Correlation Heatmap
 ```
 pdf("Cluster.pdf")
@@ -124,12 +127,8 @@ dev.off()
 2. Plot PCA (adjust label if necessary)
 ```
 pdf("PCA.pdf")
-dba.plotPCA(targets.analyze, contrast=1, label=DBA_REPLICATE)
+dba.plotPCA(targets.analyze, contrast=1, DBA_CONDITION, label=DBA_ID)
 dev.off()
-```
-or 
-```
-dba.plotPCA(targets.count)
 ```
 
 3. Plot MA
