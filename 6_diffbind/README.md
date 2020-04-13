@@ -92,6 +92,8 @@ Full list of category labels used in this function and others to call metadata:
 * DBA_REPLICATE
 * DBA_CALLER
 
+The default number of samples for this is n=3, so if you have an n=2, set minMembers = 2 to run. 
+
 ## Step 4: Performing the Differential Analysis
 ```
 targets.analyze <- dba.analyze(targets.contrast)
@@ -109,7 +111,7 @@ The final two columns give confidence measures for identifying these sites as di
 
 ## Step 5: Retrieving Consensus Peakset
 ```
-targets.peakset <- dba.peakset(targets.analyze, bRetrieve)
+targets.peakset <- dba.peakset(targets.analyze, bRetrieve = T)
 write.table(targets.peakset, "consensus_peakset.txt", sep="\t", quote=FALSE)
 ```
 This function will retrieve a list of the consensus peakset among the samples. This peakset corresponds with the "Intervals" column in the dba object.
