@@ -26,8 +26,6 @@ Follow the following code to import the peak file and convert in R once the bed 
 ```
 library(GenomicRanges)
 bed <- read.delim("/directory/pathway/file")
-bed
-colnames(bed)[1:3] <- c("chromosome", "start", "stop")
 peak <- makeGRangesFromDataFrame(bed, keep.extra.columns = TRUE)
 ```
 
